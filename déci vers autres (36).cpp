@@ -4,11 +4,11 @@
  
 using namespace std;
  
-void division(int& nombreEntre, int const& baseVoulue, vector<string>& nombre, string tableauConversion[36])
-{
+void division(int& nombreEntre, int const& baseVoulue, vector<string>& nombre, string tableauConversion[36]){
     cout << nombreEntre << " / " << baseVoulue << endl;
     cout << "Quotient: " << nombreEntre / baseVoulue << endl;
     cout << "Reste: " << nombreEntre % baseVoulue << endl << endl;
+ 
     nombre.push_back(tableauConversion[nombreEntre % baseVoulue]);
 }
  
@@ -26,16 +26,16 @@ int main()
  
     division(nombreEntre, baseVoulue, nombre, tableauConversion);
  
-    while(nombreEntre / baseVoulue != 0)
-	{
+    while(nombreEntre / baseVoulue != 0){
         nombreEntre /= baseVoulue;
         division(nombreEntre, baseVoulue, nombre, tableauConversion);
     }
-
+ 
     cout << "Nombre de chiffres du nombre entre ecrit en base " << baseVoulue << ": " << nombre.size() << endl;
  
     for(int i = nombre.size()-1; i >= 0; i--){
         cout << nombre[i];
     }
+ 
     return 0;
 }
