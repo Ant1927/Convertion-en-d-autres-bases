@@ -10,7 +10,7 @@ int main()
     cin >> nombreAconvertir ;
     string chaineFinal , chaineInter ;
 
-    cout << "Le nombre en binaire s'ecrit :"  ;
+    cout << "Le nombre en binaire s'ecrit : "  ;
     while (nombreAconvertir != 0)
     {
          if ((nombreAconvertir%2)==0)
@@ -29,6 +29,7 @@ int main()
     {
        chaineFinal += chaineInter[i] ;
     }
+    chaineFinal.erase(0,1) ;
     cout << chaineFinal << endl ;
     return 0 ;
 }
